@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masandigital.com - Blog Teknologi & Desain Modern</title>
+
+    <!-- Meta Tag SEO Umum -->
+    <meta name="description" id="meta-description" content="Jelajahi artikel terbaru tentang teknologi, desain, dan petualangan hidup di Masandigital.com. Blog pribadi yang inspiratif, informatif, dan modern dengan tampilan penuh warna.">
+    <meta name="keywords" content="teknologi, desain, blog pribadi, gaya hidup, inspirasi, tutorial, artikel, Masandigital, modern, elegan, colorful">
+    <meta name="author" content="Masandigital">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" id="canonical-url" href="https://masandigital.com/">
+
+    <!-- Open Graph (untuk Facebook, LinkedIn, dll.) -->
+    <meta property="og:title" id="og-title" content="Masandigital.com - Blog Teknologi & Desain Modern">
+    <meta property="og:description" id="og-description" content="Jelajahi artikel terbaru tentang teknologi, desain, dan petualangan hidup di Masandigital.com. Blog pribadi yang inspiratif, informatif, dan modern dengan tampilan penuh warna.">
+    <meta property="og:image" id="og-image" content="https://placehold.co/1200x630/6A0DAD/FFFFFF?text=Masandigital.com+Modern">
+    <meta property="og:url" id="og-url" content="https://masandigital.com/">
+    <meta property="og:type" id="og-type" content="website">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@masandigital">
+    <meta name="twitter:creator" content="@masandigital">
+    <meta name="twitter:title" id="twitter-title" content="Masandigital.com - Blog Teknologi & Desain Modern">
+    <meta name="twitter:description" id="twitter-description" content="Jelajahi artikel terbaru tentang teknologi, desain, dan petualangan hidup di Masandigital.com. Blog pribadi yang inspiratif, informatif, dan modern dengan tampilan penuh warna.">
+    <meta name="twitter:image" id="twitter-image" content="https://placehold.co/800x418/6A0DAD/FFFFFF?text=Masandigital.com+Modern">
+
+    <!-- Verifikasi Google Site (jika diperlukan) -->
+    <meta name="google-site-verification" content="4iOW_hDD8B-IRUAm7keHj2sZFwbLoXV_jQCJV-4CWsY" />
+    <meta name="google-site-verification" content="QV9FBw9pHOPWT746Ft1PLsRHIv-2KZwr0dAOEt6YmYQ" />
+
+    <!-- Schema Markup (JSON-LD) - Default untuk Website -->
+    <script id="schema-markup" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Masandigital.com",
+      "url": "https://masandigital.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://masandigital.com/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Font dan Icon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (untuk styling, memastikan performa) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Konfigurasi Tailwind JIT dan warna kustom */
+        :root {
+            /* Palette Warna Cerah & Elegan */
+            --color-primary-500: #6A0DAD; /* Deep Purple */
+            --color-primary-600: #8A2BE2; /* Amethyst */
+            --color-primary-700: #5D0BAF;
+
+            --color-accent-500: #FF69B4; /* Hot Pink */
+            --color-accent-600: #FF1493; /* Deep Pink */
+            --color-accent-700: #C71585;
+
+            /* Neutrals (disesuaikan agar cocok dengan palet baru) */
+            --color-neutral-900: #1A002B; /* Very Dark Purple */
+            --color-neutral-800: #2B004D;
+            --color-neutral-700: #400070;
+            --color-neutral-300: #D8BFD8; /* Thistle */
+            --color-neutral-200: #E6D9E6;
+            --color-neutral-100: #F5EEF8;
+
+            /* Gradien Warna-warni Mengkilat */
+            --gradient-start: #8A2BE2;   /* Amethyst */
+            --gradient-mid1: #FF69B4;    /* Hot Pink */
+            --gradient-mid2: #00B4D8;    /* Light Blue */
+            --gradient-end: #00C853;     /* Green Accent */
+            --gradient-shine: rgba(255, 255, 255, 0.2); /* Untuk efek mengkilat */
+        }
+
+        /* Mode Gelap - CSS Variabel */
+        html.light {
+            --color-bg-primary: var(--color-neutral-100); /* Sangat terang */
+            --color-bg-secondary: var(--color-neutral-200);
+            --color-text-primary: var(--color-neutral-900);
+            --color-text-secondary: var(--color-neutral-700);
+            --color-border: var(--color-neutral-300);
+            --color-card-bg: #FFFFFF;
+            --color-card-shadow: rgba(0, 0, 0, 0.1);
+            --color-link-hover: var(--color-primary-700);
+            --color-glow: rgba(138, 43, 226, 0.3); /* Amethyst glow */
+        }
+        html.dark {
+            --color-bg-primary: var(--color-neutral-900); /* Sangat gelap */
+            --color-bg-secondary: var(--color-neutral-800);
+            --color-text-primary: var(--color-neutral-100);
+            --color-text-secondary: var(--color-neutral-300);
+            --color-border: var(--color-neutral-700);
+            --color-card-bg: var(--color-neutral-800);
+            --color-card-shadow: rgba(0, 0, 0, 0.4);
+            --color-link-hover: var(--color-accent-500);
+            --color-glow: rgba(255, 105, 180, 0.3); /* Hot Pink glow */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--color-text-primary);
+            line-height: 1.6;
+            background: var(--color-bg-primary); /* Default background */
+            position: relative;
+            overflow-x: hidden; /* Mencegah scroll horizontal dari gradien */
+        }
+
+        /* Gradasi Latar Belakang Mengkilat */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid1), var(--gradient-mid2), var(--gradient-end));
+            background-size: 400% 400%; /* Untuk animasi gradien */
+            animation: gradient-flow 20s ease infinite;
+            z-index: -1;
+            opacity: 0.6; /* Sedikit transparan agar konten tetap terbaca */
+            filter: blur(100px); /* Efek blur untuk kelembutan */
+            pointer-events: none; /* Memastikan tidak mengganggu interaksi mouse */
+        }
+
+        @keyframes gradient-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif; /* Menggunakan Montserrat untuk judul */
+            color: var(--color-text-primary);
+        }
+
+        /* Styling Kustom untuk elemen-elemen spesifik */
+        .glass-effect {
+            background-color: var(--color-card-bg);
+            border: 1px solid var(--color-border);
+            box-shadow: 0 8px 32px 0 var(--color-card-shadow); /* Lebih besar bayangan */
+            backdrop-filter: blur(10px); /* Efek blur kaca */
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 1rem; /* Sudut lebih membulat */
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .glass-effect:hover {
+            box-shadow: 0 12px 48px 0 var(--color-card-shadow);
+            transform: translateY(-3px);
+        }
+        /* Efek mengkilat pada glass-effect */
+        .glass-effect::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--gradient-shine), transparent);
+            transition: left 0.6s ease-in-out;
+            transform: skewX(-20deg);
+            pointer-events: none;
+        }
+        .glass-effect:hover::after {
+            left: 100%;
+        }
+
+
+        /* Header */
+        .site-header {
+            background-color: var(--color-card-bg); /* Menggunakan warna card bg untuk header */
+            backdrop-filter: blur(10px); /* Lebih buram */
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        /* Tombol */
+        .btn-primary {
+            background: linear-gradient(90deg, var(--color-primary-600), var(--color-accent-500)); /* Gradasi pada tombol */
+            color: white;
+            padding: 0.75rem 1.75rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: all 0.4s ease;
+            transform: skewX(-20deg);
+            z-index: -1;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        /* Link Navigasi */
+        .main-nav a {
+            color: var(--color-text-secondary);
+            transition: color 0.3s ease, transform 0.2s ease;
+            position: relative;
+        }
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--color-primary-600);
+            transition: width 0.3s ease;
+        }
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--color-primary-600);
+            transform: translateY(-2px);
+        }
+        .main-nav a:hover::after, .main-nav a.active::after {
+            width: 100%;
+        }
+
+        /* Artikel Card */
+        .article-card {
+            display: flex;
+            flex-direction: column;
+            border-radius: 1rem; /* Lebih membulat */
+            overflow: hidden;
+        }
+        .card-image img {
+            width: 100%;
+            height: 220px; /* Tinggi tetap untuk konsistensi */
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .article-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+        .card-category {
+            background: linear-gradient(45deg, var(--color-primary-500), var(--color-accent-500)); /* Gradasi pada kategori */
+            color: white;
+            padding: 0.3rem 0.9rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .card-title a {
+            color: var(--color-text-primary);
+            transition: color 0.3s ease;
+        }
+        .card-title a:hover {
+            color: var(--color-primary-600);
+        }
+        .card-meta span {
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+        }
+
+        /* Single Article */
+        .article-content h2, .article-content h3 {
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem; /* Margin lebih besar */
+            margin-bottom: 1.5rem;
+            color: var(--color-primary-600); /* Warna judul sub-bagian */
+        }
+        .article-content blockquote {
+            border-left: 6px solid var(--color-accent-500); /* Warna border quote */
+            background-color: var(--color-bg-secondary);
+            padding: 1.25rem 1.75rem;
+            border-radius: 0.75rem;
+            color: var(--color-text-secondary);
+            font-style: italic;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .article-content code {
+            background-color: var(--color-bg-secondary);
+            padding: 0.3rem 0.6rem;
+            border-radius: 0.3rem;
+            font-family: 'Fira Code', monospace; /* Contoh font monospace */
+            color: var(--color-accent-600); /* Warna kode */
+        }
+        .article-content pre {
+            background-color: var(--color-neutral-800);
+            color: var(--color-neutral-100);
+            padding: 1rem;
+            border-radius: 0.75rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', monospace;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+        }
+        .article-content img {
+            max-width: 100%; /* Ensure images don't overflow */
+            height: auto;
+            border-radius: 1rem; /* Lebih membulat */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+        }
+        .breadcrumbs a {
+            color: var(--color-text-secondary);
+            transition: color 0.3s ease;
+        }
+        .breadcrumbs a:hover {
+            color: var(--color-primary-600);
+        }
+        .breadcrumbs .separator {
+            margin: 0 0.6rem;
+            color: var(--color-primary-500); /* Warna separator */
+        }
+        .breadcrumbs .current-page {
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        /* Tombol Mode Gelap */
+        #theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.6rem; /* Ukuran lebih besar */
+            color: var(--color-text-primary);
+            transition: color 0.3s ease, transform 0.2s ease;
+            padding: 0.6rem;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Bayangan kecil */
+        }
+        #theme-toggle:hover {
+            background-color: var(--color-bg-secondary);
+            transform: scale(1.1);
+            color: var(--color-primary-600);
+        }
+
+        /* Halaman 404 */
+        .error-404-container {
+            min-height: calc(100vh - 200px); /* Sesuaikan tinggi footer */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-bg-secondary); /* Latar belakang 404 */
+            border-radius: 1rem;
+            box-shadow: 0 8px 32px 0 var(--color-card-shadow);
+        }
+        .error-404-title {
+            font-size: 6rem; /* Lebih besar */
+            font-weight: 800;
+            color: var(--color-primary-600);
+            line-height: 1;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+        }
+        .error-404-subtitle {
+            font-size: 2rem;
+            margin-top: 1.5rem;
+            color: var(--color-text-primary);
+        }
+        .error-404-description {
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            color: var(--color-text-secondary);
+            max-width: 700px;
+        }
+
+        /* Spinner Loading */
+        .spinner {
+            border-top-color: var(--color-accent-500); /* Warna spinner */
+            border-left-color: var(--color-primary-500);
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- ====== HEADER ====== -->
+    <header class="site-header sticky top-0 z-50 py-4 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="logo">
+                <a href="index.html" class="text-3xl font-extrabold text-primary-600 hover:text-primary-700 transition-colors">Masandigital.com</a>
+            </div>
+            <nav class="main-nav hidden md:block">
+                <ul id="main-nav-list" class="flex space-x-8">
+                    <!-- Navigasi dinamis akan dimuat di sini -->
+                </ul>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <!-- Hamburger Menu for Mobile -->
+                <button id="mobile-menu-toggle" class="md:hidden text-text-primary text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-70 z-40 hidden md:hidden">
+            <div class="mobile-menu-content fixed right-0 top-0 h-full w-64 bg-card-bg shadow-lg p-6 transform translate-x-full transition-transform duration-300 ease-in-out">
+                <button id="mobile-menu-close" class="absolute top-4 right-4 text-text-primary text-2xl focus:outline-none">
+                    <i class="fas fa-times"></i>
+                </button>
+                <nav class="main-nav mt-12">
+                    <ul id="mobile-nav-list" class="flex flex-col space-y-4">
+                        <!-- Navigasi dinamis akan dimuat di sini -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ====== MAIN WRAPPER (Konten + Sidebar) ====== -->
+    <div class="main-wrapper container mx-auto px-4 py-12">
+
+        <!-- Breadcrumbs (akan diisi oleh JS) -->
+        <nav class="breadcrumbs mb-8" aria-label="breadcrumb">
+            <ol id="breadcrumb-list" class="flex items-center space-x-2">
+                <!-- Breadcrumb items will be populated here -->
+            </ol>
+        </nav>
+
+        <div id="homepage-view">
+            <section class="hero-section text-center py-20 mb-12 rounded-2xl glass-effect">
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-primary-600 drop-shadow-lg">Where Ideas Begin, and Inspiration Never Ends</h1>
+                <p class="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-10">A personal blog about technology, design, and life adventures—wrapped in stunning and immersive visuals.</p>
+                <div class="hero-search max-w-xl mx-auto">
+                     <form id="search-form" role="search" class="relative">
+                        <input type="search" id="search-input" placeholder="Explore the content that sparks your curiosity..." required
+                               class="w-full py-4 pl-6 pr-14 rounded-full bg-bg-secondary border-2 border-border focus:outline-none focus:ring-4 focus:ring-primary-500 text-text-primary text-lg shadow-inner">
+                        <button type="submit" class="absolute right-5 top-1/2 -translate-y-1/2 text-primary-600 hover:text-accent-500 transition-colors text-xl">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="recent-articles-section mb-12">
+                <h2 class="text-4xl font-bold mb-8 pb-4 border-b-2 border-border text-primary-600" id="page-title">Recent Articles</h2>
+                <div id="article-list-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"></div>
+                <div id="load-more-container" class="text-center mt-16" style="display:none;">
+                    <button id="load-more-btn" class="btn-primary">Load More Articles</button>
+                </div>
+            </section>
+
+            <!-- Sidebar content moved to dedicated sections -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <section class="about-me-section p-8 rounded-2xl glass-effect">
+                    <h3 class="text-2xl font-bold mb-6 pb-3 border-b border-border text-primary-600">About Me</h3>
+                    <img src="https://placehold.co/120x120/6A0DAD/FFFFFF?text=MD" alt="Foto profil" class="profile-pic w-32 h-32 rounded-full mx-auto mb-6 border-4 border-primary-500 object-cover shadow-lg" onerror="this.src='https://placehold.co/120x120/6A0DAD/FFFFFF?text=MD'">
+                    <p class="text-text-secondary text-center text-base">Welcome! This blog is my personal space to share ideas about technology, design, and life adventures. I hope you find it useful and inspiring!</p>
+                </section>
+
+                <section class="categories-section p-8 rounded-2xl glass-effect">
+                    <h3 class="text-2xl font-bold mb-6 pb-3 border-b border-border text-primary-600">Categories</h3>
+                    <ul class="category-list space-y-3 text-lg" id="sidebar-category-list">
+                        <li>Memuat kategori...</li>
+                    </ul>
+                </section>
+
+                <section class="latest-articles-section p-8 rounded-2xl glass-effect">
+                    <h3 class="text-2xl font-bold mb-6 pb-3 border-b border-border text-primary-600">Latest Articles</h3>
+                    <ul class="category-list space-y-3 text-lg" id="recent-posts-list">
+                        <li>Memuat artikel...</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div id="single-article-view" style="display:none;">
+            <article id="article-container" class="single-article p-10 rounded-2xl glass-effect"></article>
+            <section id="related-posts" class="mt-16" style="display:none;">
+                <h2 class="text-3xl font-bold mb-8 pb-4 border-b-2 border-border text-primary-600">Read Also</h2>
+                <div id="related-posts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            </section>
+            <nav class="article-navigation flex justify-between items-center mt-16 pt-8 border-t-2 border-border" id="article-nav" style="visibility: hidden;">
+                <a href="#" class="nav-button flex items-center space-x-3 px-8 py-4 rounded-full bg-bg-secondary text-text-primary hover:bg-primary-600 hover:text-white transition-all shadow-md hover:shadow-lg" id="nav-prev">
+                    <i class="fa-solid fa-arrow-left"></i> <span class="hidden sm:inline">Sebelumnya</span>
+                </a>
+                <a href="index.html" class="nav-button flex items-center space-x-3 px-8 py-4 rounded-full bg-bg-secondary text-text-primary hover:bg-accent-600 hover:text-white transition-all shadow-md hover:shadow-lg">
+                    <i class="fa-solid fa-house"></i> <span class="hidden sm:inline">Beranda</span>
+                </a>
+                <a href="#" class="nav-button flex items-center space-x-3 px-8 py-4 rounded-full bg-bg-secondary text-text-primary hover:bg-primary-600 hover:text-white transition-all shadow-md hover:shadow-lg" id="nav-next">
+                    <span class="hidden sm:inline">Selanjutnya</span> <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </nav>
+        </div>
+
+        <div id="error-404-view" class="error-404-container" style="display:none;">
+            <h1 class="error-404-title">404</h1>
+            <h2 class="error-404-subtitle">Halaman Tidak Ditemukan</h2>
+            <p class="error-404-description">Maaf, halaman yang Anda cari tidak ada. Mungkin Anda salah mengetik alamat atau halaman tersebut telah dipindahkan.</p>
+            <a href="index.html" class="btn-primary mt-10">Kembali ke Beranda</a>
+        </div>
+
+        <div id="loading" class="text-center py-16" style="display:none;"><div class="spinner w-16 h-16 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div><p class="text-text-secondary text-lg">Memuat...</p></div>
+        <div id="error" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-6 rounded-md mt-10 shadow-md" role="alert" style="display:none;">
+            <h2 class="font-bold text-xl mb-3">Terjadi Kesalahan</h2>
+            <p id="error-message"></p>
+        </div>
+    </div>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="site-footer bg-neutral-900 text-neutral-300 py-16 mt-16 border-t border-neutral-700">
+        <div class="container mx-auto px-4">
+             <div class="footer-widgets grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-neutral-700">
+                <div class="footer-widget">
+                    <h4 class="text-xl font-bold mb-5 text-white">About This Blog</h4>
+                    <p class="text-base leading-relaxed">Welcome! This blog is my personal space to share ideas about technology, design, and life adventures. I hope you find it useful and inspiring!</p>
+                </div>
+                <div class="footer-widget">
+                    <h4 class="text-xl font-bold mb-5 text-white">Important Links</h4>
+                    <ul class="text-base space-y-3">
+                        <li><a href="index.html" class="hover:text-primary-500 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary-500 transition-colors">About</a></li>
+                        <li><a href="contact.html" class="hover:text-primary-500 transition-colors">Contact</a></li>
+                        <li><a href="disclaimer.html" class="hover:text-primary-500 transition-colors">Disclaimer</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-primary-500 transition-colors">Privacy Policy</a></li>
+                        <li><a href="tos.html" class="hover:text-primary-500 transition-colors">TOS</a></li>
+                        <li><a id="sitemap-link" href="#" target="_blank" rel="noopener noreferrer" class="hover:text-primary-500 transition-colors">Sitemap</a></li>
+                        <li><a id="rss-link" href="#" target="_blank" rel="noopener noreferrer" class="hover:text-primary-500 transition-colors">RSS Feed</a></li>
+                    </ul>
+                </div>
+                 <div class="footer-widget">
+                    <h4 class="text-xl font-bold mb-5 text-white">Follow Me</h4>
+                    <div class="social-links flex space-x-5">
+                        <a href="#" aria-label="Facebook" class="w-12 h-12 flex items-center justify-center bg-neutral-800 rounded-full text-neutral-300 text-xl hover:bg-primary-500 hover:text-white transition-all transform hover:scale-110"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter" class="w-12 h-12 flex items-center justify-center bg-neutral-800 rounded-full text-neutral-300 text-xl hover:bg-primary-500 hover:text-white transition-all transform hover:scale-110"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram" class="w-12 h-12 flex items-center justify-center bg-neutral-800 rounded-full text-neutral-300 text-xl hover:bg-primary-500 hover:text-white transition-all transform hover:scale-110"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright text-center text-sm py-8">
+                <p>© 2024 Masandigital.com. All rights reserved. Made with ❤</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===================================================================
+        // PENGATURAN
+        // ===================================================================
+        const API_URL = "https://script.google.com/macros/s/AKfycbwbg8q-WkKm7NU9L-Q_-vNa4Lb9xNzMrjM_TLbAA45YWc4zc6dXTq0HShWMkYtOdKM-6A/exec"; // <-- GANTI DENGAN URL SCRIPT ANDA
+        
+        // **[PENTING]** Mengambil domain saat ini secara otomatis
+        const MY_DOMAIN = window.location.origin; 
+        // ===================================================================
+
+        let currentPage = 1;
+        let totalPages = 1;
+        let isLoading = false;
+        let currentFilter = null; 
+
+        document.addEventListener("DOMContentLoaded", () => {
+            try {
+                initializeSite();
+                handleRouting();
+                setupThemeToggle(); // Setup toggle mode gelap
+                setupMobileMenu(); // Setup menu mobile
+            } catch (error) {
+                console.error("Error during DOMContentLoaded:", error);
+                const errorEl = document.getElementById("error");
+                document.getElementById('error-message').textContent = `Terjadi kesalahan saat memuat halaman: ${error.message}. Silakan coba lagi.`;
+                errorEl.style.display = 'block';
+            }
+        });
+
+        function initializeSite() {
+            // Menentukan BASE_PATH dengan lebih robust
+            const pathSegments = window.location.pathname.split('/');
+            // Jika path terakhir adalah 'index.html', hapus. Jika tidak, biarkan kosong atau path folder.
+            const lastSegment = pathSegments[pathSegments.length - 1];
+            const baseFolder = (lastSegment === 'index.html' || lastSegment === '') ? pathSegments.slice(0, -1).join('/') : pathSegments.join('/');
+            const BASE_PATH = baseFolder === '' ? './' : `${baseFolder}/`;
+
+            document.querySelectorAll('a[href="index.html"]').forEach(link => { link.href = BASE_PATH; });
+            
+            // Memastikan link sitemap dan RSS menggunakan domain yang benar
+            document.getElementById('sitemap-link').href = `${API_URL}?action=sitemap&domain=${encodeURIComponent(MY_DOMAIN)}`;
+            document.getElementById('rss-link').href = `${API_URL}?action=rss&domain=${encodeURIComponent(MY_DOMAIN)}`;
+
+            document.getElementById('search-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const query = document.getElementById('search-input').value.trim();
+                if (query) {
+                    window.location.href = `${BASE_PATH}?search=${encodeURIComponent(query)}`;
+                }
+            });
+
+            document.getElementById('load-more-btn').addEventListener('click', () => {
+                if (currentPage < totalPages && !isLoading) {
+                    currentPage++;
+                    loadArticleList(currentPage, true, currentFilter);
+                }
+            });
+        }
+        
+        async function handleRouting() {
+            const params = new URLSearchParams(window.location.search);
+            const articleId = params.get('id');
+            const categoryParam = params.get('kategori');
+            const searchParam = params.get('search');
+            const is404 = params.get('404'); // Parameter untuk halaman 404
+
+            const homepageView = document.getElementById('homepage-view');
+            const singleArticleView = document.getElementById('single-article-view');
+            const error404View = document.getElementById('error-404-view');
+            
+            // Sembunyikan semua view terlebih dahulu
+            homepageView.style.display = 'none';
+            singleArticleView.style.display = 'none';
+            error404View.style.display = 'none';
+
+            if (is404) {
+                error404View.style.display = 'flex'; // Tampilkan halaman 404
+                updateMetaTags('404');
+                populateBreadcrumbs('404');
+            } else if (articleId) {
+                singleArticleView.style.display = 'block';
+                await loadSingleArticle(articleId);
+            } else {
+                homepageView.style.display = 'block';
+                await loadInitialView(categoryParam, searchParam);
+            }
+        }
+        
+        async function loadInitialView(category, search) {
+            const loading = document.getElementById("loading");
+            const errorEl = document.getElementById("error");
+            const pageTitleEl = document.getElementById('page-title');
+
+            loading.style.display = 'block';
+            errorEl.style.display = 'none';
+            document.getElementById('article-list-grid').innerHTML = '';
+
+            // **[PENTING]** Semua permintaan API sekarang menyertakan parameter domain
+            let queryParams = `action=getInitialView&domain=${encodeURIComponent(MY_DOMAIN)}`;
+            currentFilter = null; 
+            let breadcrumbTitle = 'Home';
+            let breadcrumbPath = [{ name: 'Home', url: './' }]; // Menggunakan './' untuk home
+
+            if (search) {
+                queryParams += `&search=${encodeURIComponent(search)}`;
+                pageTitleEl.innerHTML = `Hasil Pencarian: <span class="text-primary-600">'${search}'</span>`;
+                currentFilter = { type: 'search', value: search };
+                breadcrumbTitle = `Pencarian: '${search}'`;
+                breadcrumbPath.push({ name: `Pencarian: '${search}'`, url: `./?search=${encodeURIComponent(search)}` });
+            } else if (category) {
+                queryParams += `&kategori=${encodeURIComponent(category)}`;
+                pageTitleEl.innerHTML = `Kategori: <span class="text-primary-600">${category}</span>`;
+                currentFilter = { type: 'category', value: category };
+                breadcrumbTitle = `Kategori: ${category}`;
+                breadcrumbPath.push({ name: `Kategori: ${category}`, url: `./?kategori=${encodeURIComponent(category)}` });
+            } else {
+                pageTitleEl.textContent = 'Recent Articles';
+            }
+            
+            updateMetaTags('homepage', { title: pageTitleEl.textContent, description: "Jelajahi artikel terbaru tentang teknologi, desain, dan petualangan hidup di Masandigital.com." });
+            populateBreadcrumbs(breadcrumbPath);
+
+            try {
+                const response = await fetch(`${API_URL}?${queryParams}`);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const data = await response.json();
+                if (data.error) throw new Error(data.error);
+
+                populateNavigation(data.siteData.pages);
+                populateCategories(data.siteData.categories);
+                populateRecentPosts(data.siteData.recentPosts);
+                
+                displayArticleList(data.articleData.articles);
+                currentPage = data.articleData.currentPage;
+                totalPages = data.articleData.totalPages;
+                
+                document.getElementById('load-more-container').style.display = (currentPage < totalPages) ? 'block' : 'none';
+
+            } catch (error) {
+                document.getElementById('error-message').textContent = `Gagal mengambil data awal: ${error.message}`;
+                errorEl.style.display = 'block';
+            } finally {
+                loading.style.display = 'none';
+            }
+        }
+        
+        async function loadArticleList(page, isAppending = false, filter = null) {
+            if (isLoading) return;
+            isLoading = true;
+
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            if (isAppending) {
+                loadMoreBtn.textContent = 'Memuat...';
+                loadMoreBtn.disabled = true;
+            }
+            
+            let queryParams = `action=getArticles&page=${page}&limit=5&domain=${encodeURIComponent(MY_DOMAIN)}`;
+            if (filter) {
+                if (filter.type === 'category') queryParams += `&kategori=${encodeURIComponent(filter.value)}`;
+                else if (filter.type === 'search') queryParams += `&search=${encodeURIComponent(filter.value)}`;
+            }
+            
+            try {
+                const response = await fetch(`${API_URL}?${queryParams}`);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const data = await response.json();
+                if (data.error) throw new Error(data.error);
+
+                displayArticleList(data.articles, true);
+                currentPage = data.currentPage;
+                totalPages = data.totalPages;
+
+                document.getElementById('load-more-container').style.display = (currentPage < totalPages) ? 'block' : 'none';
+
+            } catch (error) {
+                console.error("Gagal memuat lebih banyak artikel:", error);
+                const errorMessage = document.getElementById('error-message');
+                errorMessage.textContent = "Gagal memuat lebih banyak artikel: " + error.message;
+                document.getElementById('error').style.display = 'block';
+            } finally {
+                isLoading = false;
+                loadMoreBtn.textContent = 'Muat Lebih Banyak';
+                loadMoreBtn.disabled = (currentPage >= totalPages);
+            }
+        }
+        
+        function displayArticleList(articles, isAppending = false) {
+            const container = document.getElementById("article-list-grid");
+            if (!articles || articles.length === 0) {
+                if (!isAppending) {
+                    let noArticleMsg = "<h2>Tidak Ada Hasil</h2><p class='text-text-secondary'>Belum ada artikel yang dipublikasikan untuk domain ini.</p>";
+                    if(currentFilter?.type === 'category') noArticleMsg = `<h2>Tidak Ada Hasil</h2><p class='text-text-secondary'>Tidak ada artikel dalam kategori "${decodeURIComponent(currentFilter.value)}".</p>`
+                    if(currentFilter?.type === 'search') noArticleMsg = `<h2>Tidak Ada Hasil</h2><p class='text-text-secondary'>Tidak ada artikel yang cocok dengan pencarian "${decodeURIComponent(currentFilter.value)}".</p>`
+                    container.innerHTML = `<div class="col-span-full text-center py-8">${noArticleMsg}</div>`;
+                }
+                return;
+            }
+
+            const articlesHtml = articles.map(article => {
+                // Pastikan BASE_PATH digunakan dengan benar untuk URL artikel
+                const articleUrl = `./?id=${article.id}`; // Menggunakan './' untuk URL artikel
+                const imageUrl = article.gambar_fitur || 'https://placehold.co/400x220/6A0DAD/FFFFFF?text=Gambar+Artikel';
+                return `
+                    <article class="article-card glass-effect rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="card-image relative">
+                            <a href="${articleUrl}"><img src="${imageUrl}" alt="${article.judul}" loading="lazy" width="400" height="220" class="w-full h-52 object-cover"></a>
+                            <span class="card-category absolute top-4 right-4">${article.kategori || 'Umum'}</span>
+                        </div>
+                        <div class="card-content p-6 flex flex-col flex-grow">
+                            <h2 class="card-title text-xl font-semibold mb-3"><a href="${articleUrl}">${article.judul}</a></h2>
+                            <p class="card-excerpt text-text-secondary text-sm mb-4 flex-grow">${article.cuplikan || 'Klik untuk membaca selengkapnya...'}</p>
+                            <div class="card-meta flex items-center justify-between text-xs text-text-secondary pt-4 border-t border-border">
+                                <span><i class="fa-solid fa-user mr-2 text-primary-500"></i> ${article.penulis}</span>
+                                <span><i class="fa-solid fa-calendar-days mr-2 text-primary-500"></i> ${article.tanggal_publikasi}</span>
+                            </div>
+                        </div>
+                    </article>`;
+            }).join('');
+            
+            if (isAppending) {
+                container.insertAdjacentHTML('beforeend', articlesHtml);
+            } else {
+                container.innerHTML = articlesHtml;
+            }
+        }
+
+        async function loadSingleArticle(articleId) {
+            const container = document.getElementById("article-container");
+            const loading = document.getElementById("loading");
+            const errorEl = document.getElementById("error");
+            
+            try {
+                loading.style.display = 'block';
+                document.getElementById("article-nav").style.visibility = 'hidden'; // Sembunyikan navigasi saat memuat
+
+                // **[PENTING]** Permintaan artikel tunggal juga menyertakan domain untuk validasi
+                const response = await fetch(`${API_URL}?id=${articleId}&domain=${encodeURIComponent(MY_DOMAIN)}`);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const article = await response.json();
+                if (article.error) throw new Error(article.error);
+
+                loading.style.display = 'none';
+                document.getElementById("article-nav").style.visibility = 'visible';
+                
+                updateMetaTags('article', article);
+                populateBreadcrumbs([
+                    { name: 'Home', url: './' }, // Menggunakan './' untuk home
+                    { name: article.kategori || 'Artikel', url: `./?kategori=${encodeURIComponent(article.kategori || 'Umum')}` },
+                    { name: article.judul, url: `./?id=${article.id}` } // Menggunakan './' untuk URL artikel
+                ]);
+                generateArticleSchema(article); // Generate schema untuk artikel
+
+                if (article.siteData) {
+                    populateNavigation(article.siteData.pages);
+                    populateCategories(article.siteData.categories);
+                    populateRecentPosts(article.siteData.recentPosts);
+                }
+
+                const featuredImageHtml = article.gambar_fitur ? `<img src="${article.gambar_fitur}" alt="${article.judul}" class="article-featured-image w-full h-auto max-h-96 object-cover rounded-xl mb-8 shadow-lg" loading="eager">` : '';
+
+                container.innerHTML = `
+                    ${featuredImageHtml}
+                    <h1 class="article-title text-4xl font-extrabold mb-4 leading-tight text-primary-600">${article.judul}</h1>
+                    <div class="meta flex flex-wrap gap-x-6 gap-y-2 text-sm text-text-secondary mb-8 pb-4 border-b border-border">
+                        <span><i class="fa-solid fa-user mr-2 text-primary-500"></i> ${article.penulis}</span>
+                        <span><i class="fa-solid fa-calendar-days mr-2 text-primary-500"></i> ${article.tanggal_publikasi}</span>
+                        ${article.kategori ? `<span><i class="fa-solid fa-tag mr-2 text-primary-500"></i> ${article.kategori}</span>` : ''}
+                    </div>
+                    <div id="toc-container" class="toc-container p-6 rounded-xl mb-8 glass-effect" style="display:none;"></div>
+                    <div id="article-content-wrapper" class="article-content text-text-primary text-lg leading-relaxed">${article.konten}</div>
+                    <div id="social-share-container" class="social-share-container mt-12 pt-8 border-t border-border" style="display:none;"></div>
+                `;
+                
+                generateSocialShareLinks(article);
+                generateTOC();
+
+                if (article.relatedArticles && article.relatedArticles.length > 0) {
+                    displayRelatedArticles(article.relatedArticles);
+                }
+
+                const navPrev = document.getElementById('nav-prev');
+                const navNext = document.getElementById('nav-next');
+                navPrev.href = article.prevId ? `./?id=${article.prevId}` : '#'; // Menggunakan './'
+                navPrev.style.visibility = article.prevId ? 'visible' : 'hidden';
+                navNext.href = article.nextId ? `./?id=${article.nextId}` : '#'; // Menggunakan './'
+                navNext.style.visibility = article.nextId ? 'visible' : 'hidden';
+
+            } catch (error) {
+                loading.style.display = 'none';
+                document.getElementById('single-article-view').style.display = 'none';
+                document.getElementById('error-404-view').style.display = 'flex'; // Tampilkan halaman 404
+                updateMetaTags('404');
+                populateBreadcrumbs('404');
+                console.error("Error loading article:", error);
+            }
+        }
+        
+        function updateMetaTags(type, data = {}) {
+            const siteTitle = "Masandigital.com";
+            const defaultImage = document.getElementById('og-image').getAttribute('data-default-image') || 'https://placehold.co/1200x630/6A0DAD/FFFFFF?text=Masandigital.com+Modern'; // Updated placeholder
+            const defaultTwitterImage = document.getElementById('twitter-image').getAttribute('data-default-image') || 'https://placehold.co/800x418/6A0DAD/FFFFFF?text=Masandigital.com+Modern'; // Updated placeholder
+            const baseUrl = window.location.origin + (window.location.pathname.includes('index.html') ? window.location.pathname.replace('index.html', '') : window.location.pathname); // Menentukan base URL dengan lebih baik
+
+            let title, description, imageUrl, url, ogType, canonicalUrl;
+
+            if (type === 'article' && data) {
+                title = `${data.judul} | ${siteTitle}`;
+                description = data.cuplikan || (data.konten ? data.konten.substring(0, 155).replace(/<[^>]*>/g, '') + '...' : 'Baca selengkapnya...');
+                imageUrl = data.gambar_fitur || defaultImage;
+                url = `${baseUrl}?id=${data.id}`;
+                ogType = 'article';
+                canonicalUrl = url;
+            } else if (type === '404') {
+                title = `404 Halaman Tidak Ditemukan | ${siteTitle}`;
+                description = "Maaf, halaman yang Anda cari tidak ada. Mungkin Anda salah mengetik alamat atau halaman tersebut telah dipindahkan.";
+                imageUrl = defaultImage;
+                url = `${baseUrl}?404=true`; // URL untuk halaman 404 kustom
+                ogType = 'website';
+                canonicalUrl = baseUrl; // Canonical kembali ke homepage
+            } else { // Homepage, Category, Search
+                title = data.title ? `${data.title} | ${siteTitle}` : siteTitle;
+                description = data.description || "Jelajahi artikel terbaru tentang teknologi, desain, dan petualangan hidup di Masandigital.com. Blog pribadi yang inspiratif, informatif, dan modern dengan tampilan penuh warna.";
+                imageUrl = defaultImage;
+                url = window.location.href;
+                ogType = 'website';
+                canonicalUrl = url;
+            }
+
+            document.title = title;
+            document.getElementById('meta-description').setAttribute('content', description);
+            document.getElementById('canonical-url').setAttribute('href', canonicalUrl);
+
+            // Open Graph
+            document.getElementById('og-title').setAttribute('content', title);
+            document.getElementById('og-description').setAttribute('content', description);
+            document.getElementById('og-image').setAttribute('content', imageUrl);
+            document.getElementById('og-url').setAttribute('content', url);
+            document.getElementById('og-type').setAttribute('content', ogType);
+
+            // Twitter Card
+            document.getElementById('twitter-title').setAttribute('content', title);
+            document.getElementById('twitter-description').setAttribute('content', description);
+            document.getElementById('twitter-image').setAttribute('content', imageUrl || defaultTwitterImage);
+
+            // Update Schema Markup (default website schema, akan diganti oleh artikel/FAQ/Event jika ada)
+            const schemaMarkup = document.getElementById('schema-markup');
+            if (type !== 'article') { // Hanya update jika bukan artikel, schema artikel ditangani generateArticleSchema
+                schemaMarkup.textContent = JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "WebSite",
+                    "name": "Masandigital.com",
+                    "url": baseUrl,
+                    "potentialAction": {
+                        "@type": "SearchAction",
+                        "target": `${baseUrl}?search={search_term_string}`,
+                        "query-input": "required name=search_term_string"
+                    }
+                });
+            }
+        }
+        
+        function generateSocialShareLinks(article) {
+            const container = document.getElementById('social-share-container'); if (!container) return;
+            // Menggunakan URL relatif yang benar untuk artikel
+            const articleUrl = encodeURIComponent(`${MY_DOMAIN}/?id=${article.id}`); 
+            const articleTitle = encodeURIComponent(article.judul);
+            const shareLinks = {
+                facebook: `https://www.facebook.com/sharer/sharer.php?u=${articleUrl}`,
+                twitter: `https://twitter.com/intent/tweet?url=${articleUrl}&text=${articleTitle}`,
+                linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${articleUrl}&title=${articleTitle}`,
+                whatsapp: `https://api.whatsapp.com/send?text=${articleTitle}%20${articleUrl}`,
+                email: `mailto:?subject=${articleTitle}&body=Check%20out%20this%20article:%20${articleUrl}`
+            };
+            container.innerHTML = `
+                <h3 class="social-share-title text-xl font-semibold text-center mb-6 text-primary-600">Bagikan Artikel Ini</h3>
+                <div class="social-share-buttons flex justify-center gap-5 flex-wrap">
+                    <a href="${shareLinks.facebook}" target="_blank" rel="noopener noreferrer" class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-600 text-white text-2xl hover:scale-110 transition-transform duration-200 shadow-lg" aria-label="Bagikan ke Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="${shareLinks.twitter}" target="_blank" rel="noopener noreferrer" class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-400 text-white text-2xl hover:scale-110 transition-transform duration-200 shadow-lg" aria-label="Bagikan ke Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="${shareLinks.linkedin}" target="_blank" rel="noopener noreferrer" class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-700 text-white text-2xl hover:scale-110 transition-transform duration-200 shadow-lg" aria-label="Bagikan ke LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="${shareLinks.whatsapp}" target="_blank" rel="noopener noreferrer" class="w-14 h-14 flex items-center justify-center rounded-full bg-green-500 text-white text-2xl hover:scale-110 transition-transform duration-200 shadow-lg" aria-label="Bagikan ke WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="${shareLinks.email}" class="w-14 h-14 flex items-center justify-center rounded-full bg-gray-500 text-white text-2xl hover:scale-110 transition-transform duration-200 shadow-lg" aria-label="Bagikan via Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            `;
+            container.style.display = 'block';
+        }
+        
+        function populateNavigation(pages) {
+            const navList = document.getElementById('main-nav-list'); 
+            const mobileNavList = document.getElementById('mobile-nav-list');
+            if (!navList || !mobileNavList) return;
+
+            const params = new URLSearchParams(window.location.search); 
+            const isHomePage = !params.has('id') && !params.has('kategori') && !params.has('search') && !params.has('404');
+            
+            let navHtml = `<li><a href="./" class="block py-2 px-3 rounded-md hover:bg-bg-secondary ${isHomePage ? 'active' : ''}">Home</a></li>`; // Menggunakan './' untuk home
+            if (pages && pages.length > 0) { navHtml += pages.map(page => `<li><a href="${page.url}" class="block py-2 px-3 rounded-md hover:bg-bg-secondary">${page.title}</a></li>`).join(''); }
+            const staticPages = [ { title: 'About', url: 'about.html' }, { title: 'Contact', url: 'contact.html' }, { title: 'Disclaimer', url: 'disclaimer.html' }, { title: 'Privacy Policy', url: 'privacy-policy.html' }, { title: 'TOS', url: 'tos.html' } ];
+            navHtml += staticPages.map(page => `<li><a href="./${page.url}" class="block py-2 px-3 rounded-md hover:bg-bg-secondary">${page.title}</a></li>`).join(''); // Menggunakan './'
+            
+            navList.innerHTML = navHtml;
+            mobileNavList.innerHTML = navHtml; // Populate mobile nav as well
+        }
+
+        function populateCategories(categories) {
+            const listContainer = document.getElementById('sidebar-category-list'); if (!listContainer) return;
+            if (categories && categories.length > 0) { listContainer.innerHTML = categories.map(category => `<li><a href="./?kategori=${encodeURIComponent(category)}" class="hover:text-primary-600 transition-colors">${category}</a></li>`).join(''); } else { listContainer.innerHTML = '<li>Tidak ada kategori.</li>'; } // Menggunakan './'
+        }
+        function populateRecentPosts(posts) {
+            const listContainer = document.getElementById('recent-posts-list'); if (!listContainer) return;
+            if (posts && posts.length > 0) { listContainer.innerHTML = posts.map(post => `<li><a href="./?id=${post.id}" class="hover:text-primary-600 transition-colors">${post.judul}</a></li>`).join(''); } else { listContainer.innerHTML = '<li>Tidak ada artikel.</li>'; } // Menggunakan './'
+        }
+        function generateTOC() {
+            const contentWrapper = document.getElementById('article-content-wrapper'); const tocContainer = document.getElementById('toc-container');
+            if (!contentWrapper || !tocContainer) return; 
+            const headings = contentWrapper.querySelectorAll('h2, h3'); 
+            if (headings.length < 2) { tocContainer.style.display = 'none'; return; }
+            
+            let tocHTML = '<p class="toc-title text-xl font-semibold mb-4 text-primary-600"><i class="fa-solid fa-list-ol mr-3 text-accent-500"></i> Daftar Isi</p><ul id="toc-list" class="toc-list space-y-2">';
+            headings.forEach((heading, index) => { 
+                const id = 'heading-' + index; 
+                heading.id = id; 
+                const levelClass = heading.tagName === 'H3' ? 'ml-6 text-base' : 'text-lg'; 
+                tocHTML += `<li class="${levelClass}"><a href="#${id}" class="hover:text-primary-600 transition-colors">${heading.textContent}</a></li>`; 
+            });
+            tocHTML += '</ul>';
+            tocContainer.innerHTML = tocHTML;
+            tocContainer.style.display = 'block';
+        }
+        function displayRelatedArticles(relatedArticles) {
+            const container = document.getElementById('related-posts'); const grid = document.getElementById('related-posts-grid');
+            if (!container || !grid || !relatedArticles || relatedArticles.length === 0) { container.style.display = 'none'; return; }
+            grid.innerHTML = relatedArticles.map(article => { 
+                const articleUrl = `./?id=${article.id}`; // Menggunakan './'
+                const imageUrl = article.gambar_fitur || 'https://placehold.co/400x160/6A0DAD/FFFFFF?text=Artikel+Terkait';
+                return `
+                    <article class="article-card glass-effect rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="card-image relative">
+                            <a href="${articleUrl}"><img src="${imageUrl}" alt="${article.judul}" loading="lazy" width="400" height="160" class="w-full h-40 object-cover"></a>
+                            <span class="card-category absolute top-2 right-2">${article.kategori || 'Umum'}</span>
+                        </div>
+                        <div class="card-content p-4">
+                            <h3 class="card-title text-base font-semibold"><a href="${articleUrl}">${article.judul}</a></h3>
+                        </div>
+                    </article>`;
+            }).join('');
+            container.style.display = 'block';
+        }
+
+        function populateBreadcrumbs(path) {
+            const breadcrumbList = document.getElementById('breadcrumb-list');
+            if (!breadcrumbList) return;
+
+            let breadcrumbHtml = '';
+            if (typeof path === 'string' && path === '404') {
+                breadcrumbHtml = `
+                    <li><a href="./" class="hover:text-primary-600">Home</a></li>
+                    <li class="separator">/</li>
+                    <li class="current-page">404 Halaman Tidak Ditemukan</li>
+                `;
+            } else if (Array.isArray(path)) {
+                path.forEach((item, index) => {
+                    if (index > 0) {
+                        breadcrumbHtml += `<li class="separator text-text-secondary">/</li>`;
+                    }
+                    if (index === path.length - 1) {
+                        breadcrumbHtml += `<li class="current-page text-text-primary font-medium">${item.name}</li>`;
+                    } else {
+                        breadcrumbHtml += `<li><a href="${item.url}" class="hover:text-primary-600">${item.name}</a></li>`;
+                    }
+                });
+            }
+            breadcrumbList.innerHTML = breadcrumbHtml;
+        }
+
+        function setupThemeToggle() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const htmlElement = document.documentElement;
+
+            // Cek preferensi pengguna dari localStorage atau sistem
+            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            
+            // Terapkan tema awal
+            if (currentTheme === 'dark') {
+                htmlElement.classList.add('dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                htmlElement.classList.add('light');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+
+            themeToggle.addEventListener('click', () => {
+                if (htmlElement.classList.contains('dark')) {
+                    htmlElement.classList.remove('dark');
+                    htmlElement.classList.add('light');
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    htmlElement.classList.remove('light');
+                    htmlElement.classList.add('dark');
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        }
+
+        function setupMobileMenu() {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const mobileMenuContent = mobileMenuOverlay.querySelector('.mobile-menu-content');
+
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuOverlay.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenuContent.classList.remove('translate-x-full');
+                }, 10); // Small delay for transition to work
+            });
+
+            mobileMenuClose.addEventListener('click', () => {
+                mobileMenuContent.classList.add('translate-x-full');
+                setTimeout(() => {
+                    mobileMenuOverlay.classList.add('hidden');
+                }, 300); // Match transition duration
+            });
+
+            // Close menu when clicking outside the content
+            mobileMenuOverlay.addEventListener('click', (e) => {
+                if (e.target === mobileMenuOverlay) {
+                    mobileMenuContent.classList.add('translate-x-full');
+                    setTimeout(() => {
+                        mobileMenuOverlay.classList.add('hidden');
+                    }, 300);
+                }
+            });
+        }
+
+        // Fungsi untuk menghasilkan Schema Markup untuk Artikel
+        function generateArticleSchema(article) {
+            const schemaMarkup = document.getElementById('schema-markup');
+            const articleSchema = {
+                "@context": "https://schema.org",
+                "@type": "Article",
+                "headline": article.judul,
+                "image": [
+                    article.gambar_fitur || 'https://placehold.co/1200x630/6A0DAD/FFFFFF?text=Masandigital.com+Modern'
+                ],
+                "datePublished": article.tanggal_publikasi_iso || new Date().toISOString(), // Pastikan format ISO 8601
+                "dateModified": article.tanggal_modifikasi_iso || new Date().toISOString(), // Pastikan format ISO 8601
+                "author": {
+                    "@type": "Person",
+                    "name": article.penulis
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Masandigital.com",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://placehold.co/600x60/6A0DAD/FFFFFF?text=Masandigital+Logo" // Ganti dengan URL logo Anda
+                    }
+                },
+                "description": article.cuplikan || (article.konten ? article.konten.substring(0, 155).replace(/<[^>]*>/g, '') + '...' : 'Baca selengkapnya...'),
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": `${MY_DOMAIN}/?id=${article.id}` // Menggunakan URL relatif yang benar
+                },
+                "articleBody": article.konten.replace(/<[^>]*>/g, '') // Hapus tag HTML dari konten
+            };
+            schemaMarkup.textContent = JSON.stringify(articleSchema);
+        }
+
+        // Contoh fungsi untuk menghasilkan Schema FAQ (jika ada data FAQ)
+        function generateFAQSchema(faqData) {
+            const schemaMarkup = document.getElementById('schema-markup');
+            const faqSchema = {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": faqData.map(item => ({
+                    "@type": "Question",
+                    "name": item.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": item.answer
+                    }
+                }))
+            };
+            schemaMarkup.textContent = JSON.stringify(faqSchema);
+        }
+
+        // Contoh fungsi untuk menghasilkan Schema Event (jika ada data Event)
+        function generateEventSchema(eventData) {
+            const schemaMarkup = document.getElementById('schema-markup');
+            const eventSchema = {
+                "@context": "https://schema.org",
+                "@type": "Event",
+                "name": eventData.name,
+                "startDate": eventData.startDate,
+                "endDate": eventData.endDate,
+                "location": {
+                    "@type": "Place",
+                    "name": eventData.locationName,
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": eventData.streetAddress,
+                        "addressLocality": eventData.addressLocality,
+                        "addressRegion": eventData.addressRegion,
+                        "postalCode": eventData.postalCode,
+                        "addressCountry": eventData.addressCountry
+                    }
+                },
+                "image": eventData.image,
+                "description": eventData.description,
+                "performer": {
+                    "@type": "Person",
+                    "name": eventData.performer
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": eventData.price,
+                    "priceCurrency": eventData.priceCurrency,
+                    "url": eventData.ticketUrl
+                }
+            };
+            schemaMarkup.textContent = JSON.stringify(eventSchema);
+        }
+        console.log('Script loaded successfully'); // Menambahkan log untuk konfirmasi
+    </script>
+</body>
+</html>
